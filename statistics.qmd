@@ -1,0 +1,45 @@
+---
+title: "Statistics"
+author: "Nevin"
+date: last-modified
+format:
+  html:
+    code-fold: true
+---
+
+# Probability Distribution
+
+## Discrete Probability Distribution (PD)
+Probability Mass Function
+```{r}
+set.seed(1)
+# Students Study Hours in a day
+studyHours <- sample(0:8, size = 20, replace = TRUE)
+
+# Frequency
+table(studyHours)
+
+# PD
+pdStudyHours <- table(studyHours)/length(studyHours)
+
+```
+
+### Plots
+
+```{r}
+barplot(
+  pdStudyHours,
+  main = "Probability Distribution of Study Hours",
+  xlab = "Study Hours",
+  ylab = "Probability",
+  col = "lightgreen",
+  names.arg = names(pdStudyHours)
+)
+```
+
+## Conitnous Probability Distribution
+
+
+```{r}
+
+```
